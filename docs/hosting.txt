@@ -1,0 +1,7 @@
+Staging
+
+http://gamereviews.native2517.com/
+----------------------------------
+DATABASE: nativec4_gamereviews
+USERNAME: nativec4_gr
+PASSWORD: SPzt?!d0b.x*

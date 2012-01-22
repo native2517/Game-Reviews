@@ -1,5 +1,10 @@
 Staging
 
+HT ACCESS PASSWORD
+----------------------
+USER: dev
+PASS: build1
+
 http://gamereviews.native2517.com/
 ----------------------------------
 DATABASE: nativec4_gamereviews

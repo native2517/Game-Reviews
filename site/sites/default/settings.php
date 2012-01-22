@@ -41,6 +41,19 @@
  * http://www.drupal.org:8080/mysite/test/ could be loaded from
  * sites/8080.www.drupal.org.mysite.test/.
  */
+ 
+/**
+ * Set $host variable based on current hosting e.g. live
+ */
+ 
+ switch($_SERVER["HTTP_HOST"]) {
+  case 'gamereviews.native2517.com':
+	$host = 'stage';
+  break;  
+  default:
+    $host = 'local';
+    break;
+}
 
 /**
  * Database settings:
@@ -89,11 +102,25 @@
  *   $db_url = 'pgsql://username:password@localhost/databasename';
  */
 
-switch($_SERVER["HTTP_HOST"]) {
-  case "localhost":
-    //$db_url = 'mysqli://root@localhost/gamesreview';
+ switch($host) {
+  case 'live':
+  
+	break;
+	
+  case 'stage':
+  
+    $db_url = 'mysqli://nativec4_gr:SPzt?!d0b.x*@localhost/nativec4_gamereviews';
+  
+	break;
+ 
+  default:
+  
+    $db_url = 'mysqli://root@localhost/gamesreview';
+	
     break;
 }
+
+
 
 $db_prefix = '';
 
